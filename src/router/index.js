@@ -10,6 +10,7 @@ import WeatherView from '../views/WeatherView.vue'
 import CountBookAPI from '../views/CountBookAPI.vue'
 import GetAllBookAPI from '../views/GetAllBookAPI.vue'
 import CloudFunctionView from '../views/CloudFunctionView.vue'
+import GetBookCountView from '../views/GetBookCountView.vue'
 import { getAuth } from 'firebase/auth'
 
 const routes = [
@@ -69,6 +70,11 @@ const routes = [
     path: '/cloud-function',
     name: 'CloudFunction',
     component: CloudFunctionView
+  },
+  {
+    path: '/GetBookCount',
+    name: 'GetBookCount',
+    component: GetBookCountView
   }
 ]
 
