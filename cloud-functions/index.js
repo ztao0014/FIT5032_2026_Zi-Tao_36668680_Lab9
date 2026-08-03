@@ -26,23 +26,21 @@ const authors = [
 ]
 
 exports.handler = (req, resp, context) => {
-  resp.setHeader('Content-Type', 'application/json')
-  resp.setHeader('Access-Control-Allow-Origin', '*')
-
   const totalBooks = authors.reduce((t, a) => t + a.famousWorks.length, 0)
 
-  resp.send(JSON.stringify({
+  const result = JSON.stringify({
     count: totalBooks,
     success: true,
     data: {
       authorsCount: authors.length,
-      totalBooks: totalBooks,
-      authors: authors.map(a => ({
-        name: a.name,
-        bookCount: a.famousWorks.length,
-        works: a.famousWorks.map(w => w.title)
-      }))
+      totalBooks: totalBooks
     },
     timestamp: new Date().toISOString()
-  }, null, 2))
+  })
+
+  resp.writeHead(200, {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*'
+  })
+  resp.end(result)
 }
