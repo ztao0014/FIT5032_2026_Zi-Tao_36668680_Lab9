@@ -11,6 +11,7 @@ import CountBookAPI from '../views/CountBookAPI.vue'
 import GetAllBookAPI from '../views/GetAllBookAPI.vue'
 import CloudFunctionView from '../views/CloudFunctionView.vue'
 import GetBookCountView from '../views/GetBookCountView.vue'
+import SellBooksView from '../views/SellBooksView.vue'
 import { getAuth } from 'firebase/auth'
 
 const routes = [
@@ -75,6 +76,11 @@ const routes = [
     path: '/GetBookCount',
     name: 'GetBookCount',
     component: GetBookCountView
+  },
+  {
+    path: '/sellBooks',
+    name: 'SellBooks',
+    component: SellBooksView
   }
 ]
 

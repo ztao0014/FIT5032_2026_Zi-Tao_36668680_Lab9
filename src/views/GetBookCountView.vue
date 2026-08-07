@@ -21,7 +21,7 @@ export default {
     async getBookCount() {
       try {
         const response = await axios.get(
-          'http://localhost:3000/countBooks'
+          'https://countbooks-nylmnbqaiy.cn-hangzhou.fcapp.run/countBooks'
         )
         this.count = response.data.count
         this.error = null

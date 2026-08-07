@@ -51,6 +51,9 @@ const handleLogout = () => {
           <router-link to="/GetBookCount" class="nav-link" active-class="active">Get Book Count</router-link>
         </li>
         <li class="nav-item">
+          <router-link to="/sellBooks" class="nav-link" active-class="active">Sell Books</router-link>
+        </li>
+        <li class="nav-item">
           <router-link to="/cloud-function" class="nav-link" active-class="active">Cloud Function</router-link>
         </li>
         <li class="nav-item" v-if="currentUser">
